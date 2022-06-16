@@ -7,12 +7,6 @@ const Banner = () => {
     const { data: dataS, isLoading, isSuccess, isError } = useGetTopArtistQuery("")
 
 
-    
-    /* console.log(dataS?.data.map((x) => x.album)); */
-    console.log(dataS);
-    
-
-
 
     useEffect(() =>
     {

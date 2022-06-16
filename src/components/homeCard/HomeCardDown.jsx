@@ -4,8 +4,9 @@ import React from 'react'
 
 const HomeCardDown = () => {
 
-    const { data:dbt, isSuccess, isLoading, isFetching, error } = useGetAlbumsQuery()
-
+    const { data: dbt, isSuccess, isLoading, isFetching, error } = useGetAlbumsQuery("")
+    console.log('get albums',dbt)
+   /*  console.log(dbt?.data.map((x) => x.album));  */
    
     return (
         <>
@@ -22,7 +23,7 @@ const HomeCardDown = () => {
                                         <img src={ items.cover_medium} alt="" />
                                         <div className="p-4 ">
                                             <div>
-                                                <h5 className="mb-2   text-start text-smooth-black tracking-tight">{`${items.title.substring(0, 6)}....`}</h5>
+                                                <h5 className="mb-2   text-start text-smooth-black tracking-tight">{`${items.title.substring(0, 27)}....`}</h5>
                                             <h5 className="mb-2 text-sm font-bold text-smooth-black text-start">{`Fans - ${items.fans}`}</h5>
                                             </div>
                                             <p className="mb-3 font-normal  text-gray-700 dark:text-gray-400 text-smooth-black text-start">{`Release date - ${items.release_date}`}</p>

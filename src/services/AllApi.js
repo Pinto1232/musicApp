@@ -20,11 +20,15 @@ export const albumsApi = createApi({
         }),
         getTopArtist: builder.query({
             query: () => `/top/?limit=10&client_id=a5665f4654279eda6c91e746db691675`
+        }),
+        getRelated: builder.query({
+            query: () => `/related`
         })
+   
     })
 })
 
 
 export const {
-    useGetAlbumsQuery, useGetTopArtistQuery,
+    useGetAlbumsQuery, useGetTopArtistQuery,useGetRelatedQuery
 } = albumsApi

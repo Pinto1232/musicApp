@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
+    screens: {
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     fontSize: {
       'xs': '.75rem',
       'sm': '.875rem',
@@ -39,7 +47,6 @@ module.exports = {
       'menu-bg-color': 'rgb(107 114 128)',
       'paragraph': 'background-color: rgb(226 232 240)',
       'gray-400': 'color: rgb(156 163 175)',
-
     },
   },
   plugins: [

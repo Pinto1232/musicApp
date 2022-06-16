@@ -7,8 +7,14 @@ import { useGetTopArtistQuery } from '../../services/AllApi'
 
 
 const ArtistView = () => {
-    const { data: topData, isSuccess, isLoading, isFetching, error } = useGetTopArtistQuery()
-    console.log(topData);
+    const { data: topData, isSuccess, isLoading, isFetching, error } = useGetTopArtistQuery("")
+
+
+    /* console.log(dataS?.data.map((x) => x.album)); */
+    /* console.log(topData); */
+
+
+
     
     
 

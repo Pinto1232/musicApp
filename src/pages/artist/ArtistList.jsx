@@ -7,9 +7,8 @@ const ArtistList = () => {
 return (
 <div>
   <ArtistView />
-  <CardUI className="my-0 px-20 bg-transparent">
-    <div>
-      <h1 className="text-white text-2xl my-3 bg-transparent">Albums</h1>
+  <CardUI className="my-0 px-20 Albums  bg-transparent">
+      <div className="flex flex-col flex-nowrap  flex-col min-h-full md:flex-row md:min-h-full   gap-5 mx-auto">
       <AlbumCard />
     </div>
   </CardUI>
