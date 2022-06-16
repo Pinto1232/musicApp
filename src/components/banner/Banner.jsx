@@ -4,7 +4,7 @@ import { useGetTopArtistQuery } from './../../services/AllApi'
 
 const Banner = () => {
    /*  const [imageUrl, setImageUrl] = useState(""); */
-    const { data: dataS, isLoading, isSuccess, isError } = useGetTopArtistQuery()
+    const { data: dataS, isLoading, isSuccess, isError } = useGetTopArtistQuery("")
 
     /* console.log(data); */
     
@@ -27,7 +27,7 @@ const Banner = () => {
       
       
     }, [dataS]);
-    /* console.log("Pinto", data); */
+
 
   return (
       <div className="container min-w-full bg-smooth-black mx-auto py-9 md:py-12 px-4 mb-8 -mt-4 md:px-6">
