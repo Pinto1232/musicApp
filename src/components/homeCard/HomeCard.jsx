@@ -2,6 +2,7 @@ import React from 'react'
 import { IoOptionsOutline } from "react-icons/io5";
 import { useGetAlbumsQuery } from '../../services/AllApi'
 import Banner from '../banner/Banner';
+import loader from './../../assets/loading.gif';
 
 const HomeCard = () => {
     const { data: dbt, isSuccess, isLoading, isFetching, error } = useGetAlbumsQuery("")
@@ -10,12 +11,12 @@ const HomeCard = () => {
     <div>
           <Banner />
           <div>
-              {isLoading && <h2>Loading data...</h2>}
-              {error && <h2>Something went wrong, please try again later...</h2>}
+              {isLoading && <img className=" flex mx-auto items-center -my-60 absolute" src={loader} alt="loading" /> }
+              {error && <h2 className='text-white text-center'>Upss.. something went wrong, please try again later...</h2>}
               {dbt?.data.slice(0, 1).map((icon) => (
                   <div key={icon.id}>
-                      <div className="flext text-white md:text-left text-center text-2xl capitalize mb-8 mx-auto">
-                          <IoOptionsOutline className="mt-2 ml-2 md:text-left flex text-center" />
+                      <div className="flext my-20 text-white md:text-left text-center text-2xl capitalize mb-8 mx-auto">
+                          <IoOptionsOutline className=" ml-40 -my-8 md:text-left flex text-center" />
                           New Release
                       </div>
                   </div>
@@ -23,8 +24,11 @@ const HomeCard = () => {
           </div>
           {/* end of the heading */}
 
+
+
           {/* Card */}
           <div>
+              {/* responsive card */}
               <div className="container flex w-full mx-auto min-h-full py-9 md:py-12 px-4 mb-8 -mt-4 md:px-6">
                   {isSuccess && (
                       <div className="flex flex-col  md:flex-row md:min-h-full   gap-5 mx-auto ">
