@@ -2,7 +2,7 @@ import React from 'react'
 
 const Login = () => {
   return (
-      <section className=" container bg-smooth-black mx-auto my-20  p-4 ">
+      <section className=" container  mx-auto my-20  p-4 ">
         <div className=" px-6 py-12">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
@@ -39,7 +39,7 @@ const Login = () => {
                       id="exampleCheck3"
                       checked
                     />
-                    <label className="form-check-label inline-block text-gray-800" for="exampleCheck2"
+                    <label className="form-check-label inline-block text-gray-800" 
                       placeholder="Remember me"
                     />
                   </div>

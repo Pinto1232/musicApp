@@ -9,9 +9,9 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
   
   return (
-         <nav className=' sticky top-0 bg-smooth-black drop-shadow-2xl '>
+    <nav className=' sticky top-0 bg-smooth-black drop-shadow-2xl z-50'>
           <div className='flex items-center font-medium justify-around '>
-                <div className='z-50 p-5 md:w-auto w-full flex justify-between'>
+                <div className=' p-5 md:w-auto w-full flex justify-between'>
                   <Link to='/'>
                       <img src={logo} alt="logo" className="md:cursor-pointer  h-10" />
                   </Link>

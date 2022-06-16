@@ -1,7 +1,7 @@
 {
   "name": "music-app",
   "private": true,
-  "proxy": "https://api.deezer.com",
+  "proxy": "https://api.deezer.com/",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

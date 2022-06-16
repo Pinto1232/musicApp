@@ -5,12 +5,11 @@ import React from 'react'
 const HomeCardDown = () => {
 
     const { data: dbt, isSuccess, isLoading, isFetching, error } = useGetAlbumsQuery("")
-    console.log('get albums',dbt)
    /*  console.log(dbt?.data.map((x) => x.album));  */
    
     return (
         <>
-             <div className="m-8">
+             <div className="m-8" style={{marginTop: '-9em'}}>
                 {isLoading && <h2>Loading data...</h2>}
                 {error && <h2>Something went wrong, please try again</h2>}
                 {isSuccess && (

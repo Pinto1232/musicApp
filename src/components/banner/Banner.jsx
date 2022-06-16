@@ -8,22 +8,6 @@ const Banner = () => {
 
 
 
-    useEffect(() =>
-    {
-       
-        const delay = dataS ? 2000 : 0;
-        
-        new Promise(resolve => setTimeout(resolve, delay)).then(() =>
-        {
-            fetch("https://api.deezer.com/artist/27/top/")
-                .then(res => res.json())
-                .then(data => (data.isError)) 
-                .catch(err => console.log("Problemino!", err))
-        });
-      
-      
-    }, [dataS]);
-
 
   return (
       <div className="container min-w-full bg-smooth-black mx-auto py-9 md:py-12 px-4 mb-8 -mt-4 md:px-6">
