@@ -34,8 +34,8 @@ const Banner = () => {
           <div className="flex items-strech justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8">
               <div className="flex flex-col md:flex-row items-strech justify-between bg-gray-50 py-6 px-6 md:py-12 lg:px-12 md:w-8/12 lg:w-7/12 xl:w-8/12 2xl:w-9/12">
                   <div className="flex flex-col justify-center md:w-1/2">
-                      <h1 className="text-3xl lg:text-4xl  font-semibold text-gray-800">Best Deal</h1>
-                      <p className="text-base lg:text-xl text-gray-800 mt-2">
+                      <h1 className="text-3xl lg:text-4xl text-white  font-semibold text-gray-800">Best Deal</h1>
+                      <p className="text-base lg:text-xl text-gray-800 text-white mt-2">
                           Save upto <span className="font-bold">50%</span>
                       </p>
                   </div>
@@ -52,8 +52,8 @@ const Banner = () => {
               </div>
               <div className="md:w-4/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 bg-gray-50 py-6 px-6 md:py-0 md:px-4 lg:px-6 flex flex-col justify-center relative">
                   <div className="flex flex-col justify-center">
-                      <h1 className="text-3xl lg:text-4xl font-semibold text-gray-800">Game Console</h1>
-                      <p className="text-base lg:text-xl text-gray-800">
+                      <h1 className="text-3xl lg:text-4xl font-semibold text-white text-gray-800">Game Console</h1>
+                      <p className="text-base lg:text-xl text-white text-gray-800">
                           Save Upto <span className="font-bold">30%</span>
                       </p>
                   </div>
