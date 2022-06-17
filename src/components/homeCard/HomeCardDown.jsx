@@ -18,14 +18,14 @@ const HomeCardDown = () => {
                         {
                         dbt.data.slice(0, 5).map((items) => (
                             <div key={items.id}>
-                                <div className="w-full shadow-md dark:bg-gray-800 bg-white dark:border-gray-700">
+                                <div className="w-full shadow-md dark:bg-gray-800 bg-smooth-black dark:border-gray-700">
                                         <img src={ items.cover_medium} alt="" />
                                         <div className="p-4 ">
                                             <div>
-                                                <h5 className="mb-2   text-start text-smooth-black tracking-tight">{`${items.title.substring(0, 27)}....`}</h5>
-                                            <h5 className="mb-2 text-sm font-bold text-smooth-black text-start">{`Fans - ${items.fans}`}</h5>
+                                                <h5 className="mb-2   text-start text-white tracking-tight">{`${items.title.substring(0, 27)}....`}</h5>
+                                            <h5 className="mb-2 text-sm font-bold text-white text-start">{`Fans - ${items.fans}`}</h5>
                                             </div>
-                                            <p className="mb-3 font-normal  text-gray-700 dark:text-gray-400 text-smooth-black text-start">{`Release date - ${items.release_date}`}</p>
+                                            <p className="mb-3 font-normal  text-gray-700 dark:text-gray-400 text-white text-start">{`Release date - ${items.release_date}`}</p>
                                         </div>
                                   </div>
                              </div>

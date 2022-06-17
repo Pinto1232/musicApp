@@ -11,14 +11,15 @@ const TopTrackCard = () => {
     const { data: topData, isSuccess, isLoading, error } = useGetTopArtistQuery("")
     const { data: radioData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
 
-    console.log(topData);
-    
       return (
             <>
               <div className="
-                     p-10 max-w-md
+                     p-10 
                      bg-white items-center
-                     sm:p-8">
+                     sm:p-8
+                     h-full
+                     md:w-full
+                     ">
                         {topData?.data.slice(0, 3).map((item) => (
                             <div key={item.id}>
                                 <div
@@ -57,7 +58,7 @@ const TopTrackCard = () => {
                                             <div className="flex items-center
                                                       space-x-4">
                                                 <div className="flex-shrink-0">
-                                                    {`${item.duration}`}
+                                                    {`${item.rank}`}
                                                 </div>
                                                 <div
                                                     className="flex flex-1 min-w-0

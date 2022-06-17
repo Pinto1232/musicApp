@@ -37,6 +37,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'bg-slate-200': 'rgb(241 245 249)',
       'red': 'rgb(239 68 68)',
       'white': '#ffffff',
       'black-text': '#000',

@@ -15,7 +15,7 @@ const Navbar = () => {
                   <Link to='/'>
                       <img src={logo} alt="logo" className="md:cursor-pointer  h-10" />
                   </Link>
-                   <div className="text-3xl md:hidden text-white"  onClick={() => setOpen(!open)}>
+                   <div className="text-3xl md:hidden text-white z-50"  onClick={() => setOpen(!open)}>
                       <ion-icon name={`${open ? 'close' : 'menu'}`}></ion-icon>    
                     </div>
               </div>
@@ -31,7 +31,8 @@ const Navbar = () => {
               </div>
             
               {/* Mobile navbar*/}
-              <div className={`md:hidden bg-smooth-black text-white  absolute w-full h-full bottom-0 py-24 pl-4
+              <div className={`md:hidden bg-smooth-black text-white 
+               absolute w-full h-full bottom-0 py-24 pl-4 
                 duration-500 easy-in ${open ? 'left-0' : 'left-[-100%]'}
               `}>
                   <div className="flex justify-center bg-smooth-black mr-4">
