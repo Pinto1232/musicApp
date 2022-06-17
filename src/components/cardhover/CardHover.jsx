@@ -41,17 +41,17 @@ const CardHover = () =>
                                         text-white
                                          capitalize"
                                     >
-                                    {items.artist.name}
+                                    {/* {items.artist.name} */}
                                     </span>
                                 </div>
-                                <img src={items.artist.picture_medium} />
+                                {/* <img src={items.artist.picture_medium} /> */}
                             </div>
                             <div className="details">
                                 <div
                                     className="center">
                                     <h1>{items.title}<br />
                                         <span>
-                                            {`Album Title: ${items.album.title}`}
+                                            {/* {`Album Title: ${items.album.title}`} */}
                                         </span>
                                     </h1>
                                     <span
@@ -62,7 +62,7 @@ const CardHover = () =>
                                                 scale-100
                                                 hover:scale-100
                                                 ease-in duration-300"
-                                        src={`${items.album.cover}`}
+                                        /* src={`${items.album.cover}`} */
                                         alt="Album cover"
                                         /></span>
                                     <ul>

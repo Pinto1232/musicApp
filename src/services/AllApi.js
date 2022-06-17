@@ -12,20 +12,20 @@ export const albumsApi = createApi({
 	reducerPath: 'albumsApi',
 	tagTypes: [ 'albumsApi' ],
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'https://api.deezer.com/artist/27'
+		baseUrl: '/'
 	}),
 	endpoints: (builder) => ({
 		getAlbums: builder.query({
-			query: () => '/albums'
+			query: () => '/api/artist/27/albums'
 		}),
 		getTopArtist: builder.query({
-			query: () => `/top`
+			query: () => `/api/artist/27/top`
 		}),
 		getRelated: builder.query({
-			query: () => `/related`
+			query: () => `/api/artist/27/related`
 		}),
 		getRadio: builder.query({
-			query: () => `/radio`
+			query: () => `/api/radio`
 		})
 	})
 });

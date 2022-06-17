@@ -39,13 +39,13 @@ const Banner = () => {
                       </div>
                       <div className="md:w-4/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 bg-gray-50 py-6 px-6 md:py-0 md:px-4 lg:px-6 flex flex-col justify-center relative">
                           <div className="flex flex-col justify-center">
-                              <h1 className="text-3xl lg:text-4xl font-semibold text-white text-gray-800">{items.title_short.substring(0, 12)}</h1>
+                              <h1 className="text-3xl lg:text-4xl font-semibold text-white text-gray-800">{/* {items.title_short.substring(0, 12)} */}</h1>
                               <p className="text-base lg:text-xl text-white text-gray-800 underline">
-                                Singer -   <span className="font-bold">{items.artist.name}</span>
+                                Singer -   <span className="font-bold">{/* {items.artist.name} */}</span>
                               </p>
                           </div>
                           <div  className="flex justify-end md:absolute md:bottom-4 md:right-4 lg:bottom-0 lg:right-0">
-                              <span><img style={{ borderRadius: '50%' }} src={items.artist.picture} alt="" className="md:w-20 md:h-20 lg:w-full lg:h-full" /></span>
+                              <span><img style={{ borderRadius: '50%' }} /* src={items.artist.picture} */ alt="" className="md:w-20 md:h-20 lg:w-full lg:h-full" /></span>
                           </div>
                       </div>
                   </div>

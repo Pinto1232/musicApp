@@ -32,29 +32,21 @@ const SearchBar = ({ placeholder }) => {
 					<FaSearch />
 				</div>
 			</div>
-				<div>
-					<ul className={styles.list}>
-					<Link className={styles.list__item}
-						to='""""'>
+			<div>
+				<ul className={styles.list}>
+					<Link className={styles.list__item} to='""""'>
 						Pinto
 					</Link>
-					<Link className={styles.list__item}
-						to='"'>
+					<Link className={styles.list__item} to='"'>
 						Pinto
 					</Link>
-					<Link className='list__item'
-						to='"'>
+					<Link className='list__item' to='"'>
 						Pinto
 					</Link>
-					<Link className='list__item'
-						to='"'>
+					<Link className='list__item' to='"'>
 						Pinto
 					</Link>
 				</ul>
-			
-
-
-				
 			</div>
 		</div>
 	);

@@ -21,7 +21,7 @@ const ArtistView = () => {
                         <div key={item.id}
                             style={{
                                 backgroundColor: 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
-                                backgroundImage: `url(${(item.artist.picture_xl && item.album.cover_xl)})`,
+                                /* backgroundImage: `url(${(item.artist.picture_xl && item.album.cover_xl)})`,  */
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
@@ -33,7 +33,7 @@ const ArtistView = () => {
                                     leading-loose md:text-6xl
                                     text-blue uppercase
                                 '>
-                                    {item.artist.name}
+                                   {/*  {item.artist.name} */}
                                 </h1>
                                 {getRelatedData?.data.slice(0, 1).map((itemRelated) => (
                                     <p className="text-white" key={itemRelated.link}>

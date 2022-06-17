@@ -37,7 +37,7 @@
 
 
 /* Search linkl style */
-.list {
+/* .list {
     display: flex;
     align-items: start;
     background-color: transparent;
@@ -48,7 +48,7 @@
 .list__item {
     margin-bottom: 20px;
     font-size: 25px
-}
+} */
 
 /* Media query */
 @media (max-width: 768px) {
