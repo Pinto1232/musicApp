@@ -1,22 +1,14 @@
 import React from 'react'
 import TopTrackCard from '../toptracks/TopTrackCard'
 import { useGetTopArtistQuery } from '../../services/AllApi'
-
+import { useGetRadioQuery } from '../../services/AllApi'
 
 
 
 
 const ArtistView = () => {
-    const { data: topData, isSuccess, isLoading, isFetching, error } = useGetTopArtistQuery("")
-
-
-    /* console.log(dataS?.data.map((x) => x.album)); */
-    /* console.log(topData); */
-
-
-
-    
-    
+    const { data: topData, isSuccess, isLoading, error } = useGetTopArtistQuery("")
+    const { data: radioData, isSuccess: successed, isLoading: loading,  error: messageError } = useGetRadioQuery("")
 
 
         return (

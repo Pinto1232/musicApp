@@ -6,8 +6,6 @@ import { useGetRelatedQuery } from './../../services/AllApi'
 
 const AlbumCard = () => {
     const { data: relatedData, isLoading, error, isSuccess } = useGetRelatedQuery("")
-    console.log(relatedData);
-    
     /* console.log(albumData?.data.map((x) => x.artist));  */
 
 
