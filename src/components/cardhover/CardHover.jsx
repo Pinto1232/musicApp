@@ -8,8 +8,7 @@ import { MdStopCircle } from "react-icons/md";
 
 const CardHover = () => {
     const { data: dataRadio, isLoading, error, isSuccess } = useGetRadioQuery("")
-    /* console.log("Data for card hover", dataRadio); */
-    
+   
     
   return (
       <>
@@ -32,7 +31,7 @@ const CardHover = () => {
                           <div className="details">
                               <div className="center">
                                   <h1>{items.title}<br /><span>{`Album Title: ${items.album.title}`}</span></h1>
-                                  <span className="grid justify-center "><img src={`${items.album.cover}`} alt="Album cover" /></span>
+                                  <span className="grid justify-center "><img className="scale-100 hover:scale-100 ease-in duration-300" src={`${items.album.cover}`} alt="Album cover" /></span>
                                   <ul>
                                       <NavLink to='/'>
                                           <li>

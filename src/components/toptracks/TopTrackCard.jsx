@@ -12,7 +12,7 @@ const TopTrackCard = () => {
     const { data: radioData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
 
       return (
-            <>
+            <div>
               <div className="
                      p-10 
                      bg-white items-center
@@ -111,7 +111,7 @@ const TopTrackCard = () => {
                             </div>
                         ))}
                 </div>
-             </>
+             </div>
         )
 }
 

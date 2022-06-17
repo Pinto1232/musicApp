@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const CarouselCard = () => {
-  return (
-    <div>CarouselCard</div>
-  )
-}
+	return <div>CarouselCard</div>;
+};
 
-export default CarouselCard
+export default CarouselCard;

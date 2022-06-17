@@ -1,60 +1,57 @@
 import React from 'react'
-
-import './styleAlbum.css'
 import { IoIosPlay } from "react-icons/io";
 import { useGetRelatedQuery } from './../../services/AllApi'
+import { FaThumbsUp,FaThumbsDown } from "react-icons/fa";
 
 const AlbumCard = () => {
     const { data: relatedData, isLoading, error, isSuccess } = useGetRelatedQuery("")
-    /* console.log(albumData?.data.map((x) => x.artist));  */
+    console.log(relatedData);
 
 
   return (
-      <>
+      <div>
           <div className="grid grid-cols-1 xs:grid-cols-2  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 mx-auto  p-4 gap-8">
              
-              {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
-              {error && <h2 className='text-white text-center text-lg'>Something went wrong, please try again later...</h2>}
-              {relatedData?.data.slice(0, 5).map((items) => (
+              {isLoading && <p className="text-white text-center text-lg">Loading data...</p>}
+              {error && <p className='text-white text-center text-lg'>Something went wrong, please try again later...</p>}
+              {relatedData?.data.slice(0, 56).map((items) => (
                   <div key={items.id}>
-                      <div className=" Card  text-white bg-white w-full ">
+                      <div className=" Card  text-white bg-smooth-black w-full">
                           <div className="overflow-hidden  shadow-lg p">
                               <a href="#" className="">
-                                  <img src={items.picture_medium} className="block h-auto " alt="img" />
+                                  <img  src={items.picture_medium} className="block h-auto w-full scale-100 hover:scale-100 ease-in duration-300" alt="img" />
                               </a>
                           </div>
                           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                               <h1 className="text-lg">
-                                  <a className="no-underline hover:underline text-smooth-black " href="#">
+                                  <a className="no-underline hover:underline text-white " href="#">
                                       {items.name}
                                   </a>
                               </h1>
-                              <p className="text-smooth-black  text-sm">
+                              <p className="text-white text-sm">
                                   {`№ Fans ${items.nb_fan}`}
                               </p>
                           </header>
 
-                          <article className="text-smooth-black ">
+                          <article className="text-white ">
                               <p className="flex items-center justify-between p-2 md:p-4">
-                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem nostrum facilis molestiae quis ad debitis mollitia expedita hic rem suscipit!
+                                 
                               </p>
                           </article>
 
-                          <footer className="flex items-center justify-between bg-white leading-none p-2 md:p-4">
-                              <a className="flex items-center no-underline hover:underline text-black" href="#">
-                                  <img alt="Placeholder" className="block rounded-full" src="" />
-                            
+                          <footer className="flex items-center justify-between bg-blue leading-none p-2 md:p-4">
+                              <a className="flex items-center no-underline hover:underline text-white" href="#">
+                                  <span><FaThumbsUp></FaThumbsUp></span>
                               </a>
                               <a className="no-underline text-grey-darker hover:text-red-dark" href="#">
-                                  <span className=" text-smooth-black">{items.type}</span>
-                                  <i className="fa fa-heart text-smooth-black"></i>
+                                  <span><FaThumbsDown></FaThumbsDown></span>
                               </a>
                           </footer>
                       </div>  
                   </div>
               ))}
         </div>
-      </>
+      </div>
   )
 }
 

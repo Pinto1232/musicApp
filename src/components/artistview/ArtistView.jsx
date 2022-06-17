@@ -10,14 +10,15 @@ import {useGetRelatedQuery} from '../../services/AllApi'
 const ArtistView = () => {
     const {data: getTopArtistData } = useGetTopArtistQuery("")
     const { data: radioData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
-    const { data: getRelatedData} =  useGetRelatedQuery("")
-    console.log('Related data', getTopArtistData);
-
+    const { data: getRelatedData } = useGetRelatedQuery("")
     
+   
+  
 
-        return (
-            <div className='bg-transparent p-0 text-black-color grid lg:grid-cols-2x'>
-                {/* responsive way */}
+    return (
+            <div>
+                  <div className="bg-transparent p-0 text-black-color grid lg:grid-cols-2x">
+
                 <div className='flex flex-col md:flex-row '>
                     {radioData?.data.slice(0, 1).map((item) => (
                         <div key={item.id}
@@ -57,13 +58,11 @@ const ArtistView = () => {
                             </div>
                         </div>
                     ))}
-                      
-                        
-                    
                         <div className="basis-3/12 w-full justify-items-center justify-between">
                             <TopTrackCard />
                         </div>
                  </div>
+            </div>
             </div>
      )
 }

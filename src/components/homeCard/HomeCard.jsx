@@ -8,7 +8,7 @@ const HomeCard = () => {
 
   return (
     <div>
-          <Banner />
+          <Banner/>
           <div>
               {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
               {error && <h2 className='text-white text-center text-lg'>Something went wrong, please try again later...</h2>}
@@ -36,7 +36,7 @@ const HomeCard = () => {
                               dbt.data.slice(0, 6).map((items) => (
                                   <div key={items.id}>
                                       <div className="w-full shadow-md bg-smooth-black">
-                                          <img src={items.cover_medium} alt="" />
+                                          <img src={items.cover_medium} className="scale-100 hover:scale-75 ease-in duration-300" alt="" />
                                           <div className="p-4 ">
                                               <div>
                                                   <h5 className="mb-2   text-start text-white tracking-tight">{`${items.title.substring(0, 23)}......`}</h5>

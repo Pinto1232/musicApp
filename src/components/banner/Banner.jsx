@@ -4,11 +4,8 @@ import { useGetRadioQuery } from '../../services/AllApi'
 
 
 const Banner = () => {
-   /*  const [imageUrl, setImageUrl] = useState(""); */
     const { data: dataTopArtist, isLoading, isSuccess, isError } = useGetTopArtistQuery("")
     const { data: dataRadio, isLoading: loadMore, isSuccess: messageSuccess, isError: error } = useGetRadioQuery("")
-
-    console.log("Data artist", dataTopArtist)
 
 
   return (
