@@ -27,12 +27,17 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('./src/assets/music-banner.jpg')",
+      },
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
       }
     },
 
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'red': 'rgb(239 68 68)',
       'white': '#ffffff',
       'black-text': '#000',
       'black-color': '#000',

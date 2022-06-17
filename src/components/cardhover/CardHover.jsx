@@ -1,6 +1,9 @@
 import React from 'react'
 import './cardhover.css';
 import { useGetRadioQuery } from '../../services/AllApi'
+import { NavLink } from 'react-router-dom';
+import { IoIosPlayCircle } from "react-icons/io";
+import { MdStopCircle } from "react-icons/md";
 
 
 const CardHover = () => {
@@ -16,21 +19,42 @@ const CardHover = () => {
 
                       <div className="cardModule ">
                           <div className="image">
-                              <div className="flex justify-center p-5 z-50  bg-smooth-black  text-center">
-                                  <span className="text-white">{items.artist.name}</span>
+                              <div
+                                  className="flex justify-center p-5 z-50  
+                                  bg-smooth-black  text-center">
+                                  <span
+                                      className="text-white capitalize">
+                                      {items.artist.name}
+                                  </span>
                               </div>
                               <img src={items.artist.picture_medium} />
                           </div>
                           <div className="details">
                               <div className="center">
                                   <h1>{items.title}<br /><span>{`Album Title: ${items.album.title}`}</span></h1>
-                                  <span className="grid justify-center "><img src={`${items.album.cover}`} alt="" /></span>
+                                  <span className="grid justify-center "><img src={`${items.album.cover}`} alt="Album cover" /></span>
                                   <ul>
-                                      <li><a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                      <li><a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                      <li><a href="#"><i className="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                      <li><a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                      <li><a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                      <NavLink to='/'>
+                                          <li>
+                                              <IoIosPlayCircle
+                                                  className="text-3xl
+                                                      transition duration-150 ease-out md:ease-in
+                                                      ease-in duration-300
+                                                      hover:text-blue
+                                                  "
+                                              />
+                                          </li>
+                                          <li>
+                                              <MdStopCircle
+                                                  className="text-3xl
+                                                    transition duration-150 ease-out md:ease-in
+                                                      ease-in duration-300
+                                                     hover:text-red
+                                                  "
+                                              />
+                                          </li>
+                                          <li></li>
+                                      </NavLink>
                                   </ul>
                               </div>
                           </div>
