@@ -1,9 +1,6 @@
 import React from 'react'
 import TopTrackCard from '../toptracks/TopTrackCard'
-import { useGetTopArtistQuery } from '../../services/AllApi'
-import { useGetRadioQuery } from '../../services/AllApi'
-import {useGetRelatedQuery} from '../../services/AllApi'
-
+import { useGetTopArtistQuery, useGetRadioQuery, useGetRelatedQuery } from '../../services/AllApi'
 
 
 
@@ -17,7 +14,7 @@ const ArtistView = () => {
 
     return (
             <div>
-                  <div className="bg-transparent p-0 text-black-color grid lg:grid-cols-2x">
+                  <div className="bg-transparent p-0 text-black-color grid lg:grid-cols-2x ">
 
                 <div className='flex flex-col md:flex-row '>
                     {radioData?.data.slice(0, 1).map((item) => (
@@ -29,9 +26,7 @@ const ArtistView = () => {
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
                             }}
-                            className="
-                              w-full
-                            "
+                            className="w-full"
                             >
                             <div className=' basis-6/12  h-full px-10  m-10 '>
                                 <h1 className='prose text-lg

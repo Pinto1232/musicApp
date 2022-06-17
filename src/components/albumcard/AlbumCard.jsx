@@ -1,11 +1,10 @@
-import React from 'react'
-import { IoIosPlay } from "react-icons/io";
+import React from 'react';
 import { useGetRelatedQuery } from './../../services/AllApi'
 import { FaThumbsUp,FaThumbsDown } from "react-icons/fa";
 
 const AlbumCard = () => {
     const { data: relatedData, isLoading, error, isSuccess } = useGetRelatedQuery("")
-    console.log(relatedData);
+    
 
 
   return (

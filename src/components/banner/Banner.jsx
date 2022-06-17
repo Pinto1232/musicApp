@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useGetTopArtistQuery } from './../../services/AllApi'
-import { useGetRadioQuery } from '../../services/AllApi'
+import{
+    useGetRadioQuery,
+    useGetTopArtistQuery
+} from '../../services/AllApi'
 
 
 const Banner = () => {
