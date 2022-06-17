@@ -8,7 +8,7 @@ import { MdStopCircle } from "react-icons/md";
 
 const CardHover = () => {
     const { data: dataRadio, isLoading, error, isSuccess } = useGetRadioQuery("")
-    console.log("Data for card hover", dataRadio);
+    /* console.log("Data for card hover", dataRadio); */
     
     
   return (

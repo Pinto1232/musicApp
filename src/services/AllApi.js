@@ -17,17 +17,17 @@ export const albumsApi = createApi({
  }),
     endpoints: (builder) => ({
         getAlbums: builder.query({
-            query:() => '/albums/?client_id=a5665f4654279eda6c91e746db691675',
+            query:() => '/albums',
         }),
         getTopArtist: builder.query({
-            query: () => `/top/?limit=20&client_id=a5665f4654279eda6c91e746db691675`
+            query: () => `/top`
         }),
         getRelated: builder.query({
-            query: () => `/related/?client_id=a5665f4654279eda6c91e746db691675`
+            query: () => `/related`
         }),
         getRadio: builder.query(
             {
-                query: () => `/radio/?client_id=a5665f4654279eda6c91e746db691675`
+                query: () => `/radio`
             })
    
     })
