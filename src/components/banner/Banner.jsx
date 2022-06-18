@@ -26,7 +26,7 @@ const Banner = () => {
                           </div>
 
                           <div>
-                              <div className="md:w-1/2 gap-3 md:mt-0 flex w-fit mx-auto justify-center md:justify-end">
+                              <div className="md:w-1/2 -z-50 gap-3 md:mt-0 flex w-fit mx-auto justify-center md:justify-end">
                                   {dataTopArtist?.data.slice(0, 2).map((itemsVideo) => (
                                       <div key={itemsVideo.id}>
                                           <img className="text-white w-fit" src={itemsVideo.album.cover_big} alt="Image" />

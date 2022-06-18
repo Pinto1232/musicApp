@@ -6,6 +6,7 @@ import { IoRadio } from "react-icons/io5";
 import { IoPlaySkipForwardSharp } from "react-icons/io5";
 import { IoDuplicate } from "react-icons/io5";
 import { IoFilm } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
 
 const DropdownLinks = () => {
     const dropdownLinks = [
@@ -21,6 +22,7 @@ const DropdownLinks = () => {
                         {label: 'Top Artist', to: '/top-artist', id: 2, icon: <IoStatsChartSharp className="mt-1 mx-3 text-blue"/>},
                         {label: 'Playlist', to: '/playlist', id: 3, icon: <IoPlaySkipForwardSharp className="mt-1 mx-3 text-blue"/>},
                         {label: 'Albums', to: '/albums', id: 4, icon: <IoIosAlbums className="mt-1 mx-3 text-blue"/>},
+                        {label: 'Home', to: '/', id: 4, icon: <FaHome className="mt-1 mx-3 text-blue"/>},
                     ]
                 },
  
