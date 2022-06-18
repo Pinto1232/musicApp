@@ -6,48 +6,69 @@ import { useGetAlbumsQuery, useGetRadioQuery, useGetRelatedQuery, useGetTopArtis
 import { Link } from 'react-router-dom';
 
 const SearchBar = ({ placeholder }) => {
-	const [ searchInput ] = useState();
+	const [query, setQuery] = useState("")
+
 	/* Custom hooks */
 	const { data: getRadios, isLoading, isSuccess, isError } = useGetRadioQuery('');
 	const { data: getAllbumsData } = useGetAlbumsQuery('');
 	const { data: getRelatedData } = useGetRelatedQuery('');
 	const { data: getArtistTopicData } = useGetTopArtistQuery('');
+	
+   
 
-	console.log('Radio', getRadios);
-	console.log('Albums', getAllbumsData);
+
+	/* console.log('Radio', getRadios); */
+	/* console.log('Albums', getAllbumsData);
 	console.log('Related', getRelatedData);
-	console.log('Topics', getArtistTopicData);
+	console.log('Topics', getArtistTopicData); */
+	const clickHandler = () =>
+	{
+		console.log(query)
+	}
 
+	
 	return (
-		<div className='text-white'>
+			<div>
 			<div className={styles.searchInput}>
 				<div className='md:flex hidden'>
 					<DropDown />
 				</div>
 
-				<form>
-					<input className={styles.search} type='text' placeholder={placeholder} />
-				</form>
+					<input
+						className={styles.search}
+						type='text'
+						placeholder={placeholder}
+						onChange={(e) => setQuery(e.target.value)}
+					/>
+		
 				<div className={styles.searchIcon}>
-					<FaSearch />
+					<FaSearch
+					    onClick={clickHandler}
+					/>
 				</div>
 			</div>
-			<div>
-				<ul className={styles.list}>
-					<Link className={styles.list__item} to='""""'>
-						Pinto
-					</Link>
-					<Link className={styles.list__item} to='"'>
-						Pinto
-					</Link>
-					<Link className='list__item' to='"'>
-						Pinto
-					</Link>
-					<Link className='list__item' to='"'>
-						Pinto
-					</Link>
+			
+			<span className='flex  m-2 p-auto grid-cols-8 xs:grid-cols-3 mx-60 mx-auto '>
+				<ul
+					style={
+						query.length === 0
+							? { display: 'none' }
+							: {display: 'block'}
+					}
+
+
+					className={styles.list}>
+					{getRadios?.data.filter((userTitle) => userTitle.title.toLowerCase().includes(query)
+					).slice(0, 8).map((userTitle) => (
+						<Link
+							key={userTitle.id}
+							className={styles.list__item}
+							to=''>
+							{userTitle.title}
+						</Link>
+					))}
 				</ul>
-			</div>
+			</span>
 		</div>
 	);
 };

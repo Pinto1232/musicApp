@@ -10,11 +10,11 @@ const Navbar = () => {
 	return (
 		<nav className=' sticky top-0 bg-smooth-black drop-shadow-2xl z-50'>
 			<div className='flex items-center font-medium justify-around '>
-				<div className=' p-5 md:w-auto w-full flex justify-between'>
+				<div className=' p-5 z-50 md:w-auto w-full flex justify-between'>
 					<Link to='/'>
 						<img src={logo} alt='logo' className='md:cursor-pointer  h-10' />
 					</Link>
-					<div className='text-3xl md:hidden text-white z-50' onClick={() => setOpen(!open)}>
+					<div className='text-3xl md:hidden text-white  my__logo' onClick={() => setOpen(!open)}>
 						<ion-icon name={`${open ? 'close' : 'menu'}`} />
 					</div>
 				</div>
