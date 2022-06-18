@@ -8,20 +8,28 @@ const ArtistView = () => {
     const {data: getTopArtistData } = useGetTopArtistQuery("")
     const { data: radioData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
     const { data: getRelatedData } = useGetRelatedQuery("")
+/* 
+    console.log("Artist view", radioData); */
+    console.log(radioData);
+    
+     /* console.log(radioData?.data.map((x) => x.album)); */ 
+    
     
    
   
 
     return (
             <div>
-                  <div className="bg-transparent p-0 text-black-color grid lg:grid-cols-2x ">
-
+            <div>
+            {loading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
+              {messageError && <h2 className='text-white text-center text-lg'>Something went wrong, please try again later...</h2>}
+                 <div className="bg-transparent p-0 text-black-color grid lg:grid-cols-2x ">
                 <div className='flex flex-col md:flex-row '>
-                    {radioData?.data.slice(0, 1).map((item) => (
+                    {getRelatedData?.data.slice(0, 1).map((item) => (
                         <div key={item.id}
                             style={{
                                 backgroundColor: 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
-                                /* backgroundImage: `url(${(item.artist.picture_xl && item.album.cover_xl)})`,  */
+                                backgroundImage: `url(${(item.picture_xl && item.picture_xl)})`,  
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
@@ -57,7 +65,8 @@ const ArtistView = () => {
                             <TopTrackCard />
                         </div>
                  </div>
-            </div>
+                </div>
+               </div>
             </div>
      )
 }
