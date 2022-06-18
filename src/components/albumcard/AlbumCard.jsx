@@ -9,16 +9,16 @@ const AlbumCard = () => {
 
   return (
       <div>
-          <div className="grid grid-cols-1 xs:grid-cols-2  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 mx-auto  p-4 gap-8">
+          <div className="grid grid-cols-1 xs:grid-cols-2  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-7 mx-auto mt-10  p-2 gap-8">
              
               {isLoading && <p className="text-white text-center text-lg">Loading data...</p>}
               {error && <p className='text-white text-center text-lg'>Something went wrong, please try again later...</p>}
-              {relatedData?.data.slice(0, 56).map((items) => (
+              {relatedData?.data.slice(0, 14).map((items) => (
                   <div key={items.id}>
                       <div className=" Card  text-white bg-smooth-black w-full">
-                          <div className="overflow-hidden  shadow-lg p">
-                              <a href="#" className="">
-                                  <img  src={items.picture_medium} className="block h-auto w-full scale-100 hover:scale-100 ease-in duration-300" alt="img" />
+                          <div className="overflow-hidden  shadow-lg ">
+                              <a href="#">
+                                  <img  src={items.picture_medium} className="block h-auto w-full" alt="img" />
                               </a>
                           </div>
                           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
