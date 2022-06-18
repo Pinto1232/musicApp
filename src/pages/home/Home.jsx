@@ -1,5 +1,4 @@
 import React from 'react';
-import CardHover from '../../components/cardhover/CardHover';
 import HomeCard from '../../components/homeCard/HomeCard';
 import HomeCardDown from '../../components/homeCard/HomeCardDown';
 import Wrapper from '../../components/wrapper/Wrapper';
@@ -17,14 +16,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-
-			<div>
-				<CardHover />
-			</div>
-
-			<Wrapper>
-				<HomeCardDown />
-			</Wrapper>
+			<HomeCardDown />
 		</div>
 	);
 };
