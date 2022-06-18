@@ -1,0 +1,16 @@
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 8;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 700%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}

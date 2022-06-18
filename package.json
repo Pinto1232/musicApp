@@ -28,6 +28,7 @@
     "react-slick": "^0.29.0",
     "reactstrap": "^9.1.1",
     "redux-devtools-extension": "^2.13.9",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
     "three": "^0.141.0",
     "yarn": "^1.22.19"
@@ -43,6 +44,7 @@
     "vite": "^2.9.9"
   },
   "resolutions": {
-    "styled-components": "^5"
+    "styled-components": "^5",
+    "esbuild": "0.14.44"
   }
 }

@@ -14,17 +14,7 @@ const SearchBar = ({ placeholder }) => {
 	const { data: getRelatedData } = useGetRelatedQuery('');
 	const { data: getArtistTopicData } = useGetTopArtistQuery('');
 	
-   
 
-
-	/* console.log('Radio', getRadios); */
-	/* console.log('Albums', getAllbumsData);
-	console.log('Related', getRelatedData);
-	console.log('Topics', getArtistTopicData); */
-	const clickHandler = () =>
-	{
-		console.log(query)
-	}
 
 	
 	return (
@@ -43,7 +33,7 @@ const SearchBar = ({ placeholder }) => {
 		
 				<div className={styles.searchIcon}>
 					<FaSearch
-					    onClick={clickHandler}
+					 
 					/>
 				</div>
 			</div>

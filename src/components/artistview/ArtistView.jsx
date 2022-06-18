@@ -5,18 +5,8 @@ import { useGetTopArtistQuery, useGetRadioQuery, useGetRelatedQuery } from '../.
 
 
 const ArtistView = () => {
-    const {data: getTopArtistData } = useGetTopArtistQuery("")
-    const { data: radioData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
+    const { data: getTopArtistData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
     const { data: getRelatedData } = useGetRelatedQuery("")
-/* 
-    console.log("Artist view", radioData); */
-    console.log(radioData);
-    
-     /* console.log(radioData?.data.map((x) => x.album)); */ 
-    
-    
-   
-  
 
     return (
             <div>
@@ -41,7 +31,7 @@ const ArtistView = () => {
                                     leading-loose md:text-6xl
                                     text-blue uppercase
                                 '>
-                                   {/*  {item.artist.name} */}
+                                    {item.name} 
                                 </h1>
                                 {getRelatedData?.data.slice(0, 1).map((itemRelated) => (
                                     <p className="text-white" key={itemRelated.link}>
