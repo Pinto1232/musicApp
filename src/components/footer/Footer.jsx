@@ -12,6 +12,12 @@ const appleIcon = <FontAwesomeIcon icon={faAppStoreIos} />;
 const playstoreIcon = <FontAwesomeIcon icon={faGooglePlay} />;
 
 const Footer = () => {
+	/* Even to get the email subscription */
+	const handlerEventEmail = (e) => {
+		e.preventDefault();
+		console.log(e.target.value);
+	};
+
 	return (
 		<div>
 			<div>
@@ -54,6 +60,7 @@ const Footer = () => {
 													value=''
 													name='mail'
 													id='mail'
+													onClick={(e) => handlerEventEmail}
 												/>
 												<button
 													type='submit'
@@ -73,30 +80,30 @@ const Footer = () => {
 								<div className='container' style={{ marginBottom: '2%', marginTop: ' 2%' }}>
 									<div className='row text-center'>
 										<p>
-											<a href='#' className='btn btn-store text-white'>
-												<span style={{ fontSize: '200%', float: 'left' }}>{appleIcon}</span>
+											<a href='#' className='btn btn-store  text-white'>
+												<span style={{ fontSize: '200%' }}>{appleIcon}</span>
 												<span
-													className='btn-label'
+													className='btn-label mb-43'
 													style={{
 														display: ' block',
 														alignItems: ' center',
 														lineHeight: ' 1'
 													}}>
-													&nbsp;&nbsp;Download on the
+													Download on the
 												</span>
 												<span
-													className='btn-caption'
+													className='btn-caption mb-2'
 													style={{
 														display: ' block',
 														alignItems: ' center',
 														lineHeight: ' 2'
 													}}>
-													&nbsp;App Store
+													App Store
 												</span>
 											</a>
-											&nbsp;&nbsp;&nbsp;
+
 											<a href='#' className='btn btn-store text-white'>
-												<span style={{ fontSize: '200%', float: 'left' }}>{playstoreIcon}</span>
+												<span style={{ fontSize: '200%' }}>{playstoreIcon}</span>
 												<span
 													className='btn-label'
 													style={{
@@ -105,23 +112,23 @@ const Footer = () => {
 														lineHeight: ' 1'
 													}}>
 													{' '}
-													&nbsp; Download on the
+													Download on the
 												</span>
 												<span
-													className='btn-caption'
+													className='btn-caption -mt-10'
 													style={{
 														display: ' block',
 														alignItems: ' right',
 														lineHeight: ' 12',
 														color: ' #fff'
 													}}>
-													&nbsp;Google Play
+													Google Play
 												</span>
 											</a>
 										</p>
 									</div>
 								</div>
-								<ul className='clearfix '>
+								<ul className='clearfix -mt-4 '>
 									<li>
 										<a href='#'>{fbicon}</a>
 									</li>
