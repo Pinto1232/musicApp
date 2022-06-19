@@ -1,8 +1,6 @@
 import React from 'react';
 import HomeCard from '../../components/homeCard/HomeCard';
 import HomeCardDown from '../../components/homeCard/HomeCardDown';
-import Wrapper from '../../components/wrapper/Wrapper';
-import CardUI from './../../UI/CardUI';
 
 const Home = () => {
 	return (

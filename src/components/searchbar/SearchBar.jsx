@@ -68,10 +68,13 @@ const SearchBar = ({ placeholder }) => {
 										Album Cover
 									</TableCell>
 									<TableCell align="center">
-										Title
+										Music Title
 									</TableCell>
 									<TableCell align="center">
 										Year  RELESE
+									</TableCell>
+									<TableCell align="center">
+										Fans Number
 									</TableCell>
 								</TableRow>
 							</TableHead>
@@ -86,6 +89,9 @@ const SearchBar = ({ placeholder }) => {
 									</TableCell>
 									< TableCell align="center">
 											{albumTitle.title.substring(0,40)}
+									</TableCell>
+									<TableCell align="center">
+											{albumTitle.release_date}
 									</TableCell>
 									<TableCell align="center">
 											{albumTitle.fans}

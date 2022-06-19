@@ -1,6 +1,7 @@
 import React from 'react';
 import { useGetRelatedQuery } from './../../services/AllApi'
 import { FaThumbsUp,FaThumbsDown } from "react-icons/fa";
+import CardFixed from '../Card/CardFixed';
 
 const AlbumCard = () => {
     const { data: relatedData, isLoading, error, isSuccess } = useGetRelatedQuery("")
@@ -49,7 +50,8 @@ const AlbumCard = () => {
                       </div>  
                   </div>
               ))}
-        </div>
+          </div>
+          <CardFixed />
       </div>
   )
 }
