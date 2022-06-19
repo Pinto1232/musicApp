@@ -22,9 +22,6 @@ const useStyles = makeStyles({
 });
 
 
- /* className='bg-smooth-black text-white ' */
-
-
 
 const SearchBar = ({ placeholder }) => {
 	const [ query, setQuery ] = useState('');
