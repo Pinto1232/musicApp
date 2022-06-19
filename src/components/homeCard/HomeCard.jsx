@@ -2,6 +2,7 @@ import React from 'react'
 import { IoOptionsOutline } from "react-icons/io5";
 import { useGetAlbumsQuery } from '../../services/AllApi'
 import Banner from '../banner/Banner';
+import TopBar from '../__barHome/TopBar';
 import './homeCard.css'
 
 const HomeCard = () => {
@@ -11,13 +12,16 @@ const HomeCard = () => {
     <div>
           <Banner/>
           <div>
+              
               {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
-              {error && <h2 className='text-white text-center text-lg'>Something went wrong, please try again later...</h2>}
-              {dbt?.data.slice(0, 1).map((icon) => (
+              {error && <h2 className='text-white text-center text-lg'>
+                  Something went wrong, please try again later...</h2>}
+                  {dbt?.data.slice(0, 1).map((icon) => (
                   <div key={icon.id}>
-                      <div className="flext my-20 text-white md:text-left text-center text-2xl capitalize mb-8 mx-auto">
-                          <IoOptionsOutline className=" ml-40 -my-8 md:text-left flex text-center" />
-                          New Release
+                      <div className="flext my-20 text-white
+                       md:text-left text-center
+                       text-2xl capitalize mb-8 mx-auto">
+                          <TopBar/>
                       </div>
                   </div>
               ))}
@@ -31,7 +35,7 @@ const HomeCard = () => {
                               dbt.data.slice(0, 6).map((items) => (
                                   <div key={items.id}>
                                       <div className="w-full shadow-md bg-white">
-                                          <img src={items.cover_medium} className="scale-100 hover:scale-75 duration-300 skeleton " alt="" />
+                                          <img src={items.cover_medium} className="scale-100 hover:scale-75 duration-300 skeleton -z-50" alt="" />
                                           <div className="p-4 ">
                                               <div>
                                                   <h5 className="mb-2   text-start text-smooth-black tracking-tight skeleton">{`${items.title.substring(0, 23)}......`}</h5>

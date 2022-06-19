@@ -1,0 +1,47 @@
+.GridContainer {
+    display: flex;
+    justify-items: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 1em;
+    flex-basis: 1;
+    flex: 1;
+    margin-top: -1em;
+}
+
+.GridContainer div {
+    margin-left: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.GridContainer div:last-child{
+    background-color: #47c2ff;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    border-radius: 1;
+    padding-top: 0.1;
+    padding-bottom: 0.1;
+}
+
+.GridContainer div:last-child:hover{
+    background-color: #121212;
+    color:#fff;
+}
+
+/* @media  */
+@media (max-width: 768px) {
+    .GridContainer div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100px!important;
+        flex-basis: 1;
+        flex: 1;
+        margin: 1em;
+    }
+}

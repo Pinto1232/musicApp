@@ -23,8 +23,9 @@ import{
 const useStyles = makeStyles({
 	table: {
 		minWidth: 774,
-		backgroundColor: '#ffffffd9'
+		backgroundColor: '#ffffffd9',
 	},
+
 });
 
 
@@ -40,12 +41,12 @@ const SearchBar = ({ placeholder }) => {
 	const { data: getRelatedData } = useGetRelatedQuery('');
 	const { data: getArtistTopicData } = useGetTopArtistQuery('');
 
-	//TODO: preview (getArtistTopicData)
-	//TODO: Find nb_fan,  release_date, title, record_type, cover_small from Albums (getAllbumsData)
-	//TODO: Get name, nb_album (getRelatedData)
-	//TODO: get title, tracklist, md5_image, tracklist (Album) (getArtistTopicData)
-	//TODO: Get  from contributors, role
-	//TODO: Get title from (getRadios)
+	//TODO: 
+	//TODO: 
+	//TODO: 
+	//TODO: 
+	//TODO: 
+	//TODO: 
 	 
 	return (
 		<div>
@@ -65,12 +66,12 @@ const SearchBar = ({ placeholder }) => {
 					</div>
 				</div>
 				<Paper
-					className='list absolute tb__helper'
+					className='list absolute tb__helper '
 					style={query.length === 0 ? { display: 'none' } : { display: 'block' }}>
 					<TableContainer>
 						<Table className={classes.table} aria-label='simple table'>
 							<TableHead className="bg-smooth-black">
-								<TableRow style={{color: 'white'}}>
+								<TableRow style={{color: 'white'}} className="z-50">
 									<TableCell align="center" className='text-white'>
 										<Typography color="common.white">
 												Album Cover

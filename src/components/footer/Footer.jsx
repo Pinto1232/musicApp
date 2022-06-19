@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom/';
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+
 
 const Footer = () => {
 	return (
@@ -17,8 +17,11 @@ const Footer = () => {
 						maxWidth='lg'>
 						<Grid  container spacing={5}>
                        <Grid item xs={12} sm={4}>
-								<Box className="font-semibold 
-								  text-2xl" borderBottom={1}>INFORMATION</Box>
+								<Box
+									className="font-semibold 
+								     text-1xl" borderBottom={1}>
+									INFORMATION
+								</Box>
 								<Box>
 									<Link to=''>ABOUT US</Link>
 								</Box>
@@ -34,8 +37,12 @@ const Footer = () => {
 							</Grid>
 
 							<Grid item xs={12} sm={4}>
-								<Box className="font-semibold 
-								  text-2xl" borderBottom={1}>WHY US?</Box>
+								<Box
+									className="font-semibold 
+								     text-1xl" font-semibold
+									borderBottom={1}>
+									WHY US?
+								</Box>
 								<Box>
 									<Link to=''>FAQ</Link>
 								</Box>
@@ -52,8 +59,10 @@ const Footer = () => {
 
 							<Grid item xs={12} sm={4}>
 								<Box
-									className="font-semibold  text-2xl" 
-									>MY ACCOUNT</Box>
+									className="font-semibold 
+									 text-1xl" >
+									MY ACCOUNT
+								</Box>
 								<Box>
 									<Link to=''>T's & C's</Link>
 								</Box>
@@ -69,9 +78,16 @@ const Footer = () => {
 							</Grid>
 
 							<Grid   item xs={12} sm={4}>
-								<Box className="font-semibold  text-2xl"  borderBottom={1}>About Us</Box>
+								<Box
+									className="font-semibold 
+									 text-1xl"font-semibold
+									 borderBottom={1}>
+									About Us
+								</Box>
 								<Box>
-									<Link to=''>TRACK MY ORDER</Link>
+									<Link to=''>
+										TRACK MY ORDER
+									</Link>
 								</Box>
 								<Box>
 									<Link to=''>HELP</Link>
@@ -80,8 +96,11 @@ const Footer = () => {
 							</Grid>
 
 							<Grid  item xs={12} sm={4}>
-								<Box className="font-semibold  text-2xl"  borderBottom={1}>Faq</Box>
-				
+								<Box
+									className="font-semibold   
+								    text-1xl" borderBottom={1}>
+									Faq
+								</Box>
 								<Box>
 									<Link to=''>Franchises</Link>
 								</Box>
@@ -91,7 +110,10 @@ const Footer = () => {
 							</Grid>
 
 							<Grid  item xs={12} sm={4}>
-								<Box className="font-semibold  text-2xl"  borderBottom={1}>Show</Box>
+								<Box
+									className="font-semibold 
+									text-1xl" font-semibold
+									borderBottom={1}>Show</Box>
 								<Box>
 									<Link to=''>ORDERS&SHIPPING</Link>
 								</Box>
@@ -101,9 +123,9 @@ const Footer = () => {
 								
 							</Grid>
 						</Grid>
-						<Box className="pb-10, pt-10 font-semibold
-								  text-2xl">
-						   Entertainement For LIfe
+						<Box className="pb-10, pt-10
+						font-semibold text-1xl uppercase cursor-pointer">
+						   2022 Copyright &copy; <a href="http://pintotnet@gmail.com">Pinto All right reserved</a>
 						</Box>
 					</Container>
 				</Box>

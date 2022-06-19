@@ -1,0 +1,7 @@
+/* @media */
+@media (max-width: 768px) {
+    .mobile__helper {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
