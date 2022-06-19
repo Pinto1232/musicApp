@@ -8,20 +8,21 @@ const Navbar = () => {
 	const [ open, setOpen ] = useState(false);
 
 	return (
-		<nav className=' sticky top-0 bg-smooth-black drop-shadow-2xl z-50'>
-			<div className='flex items-center font-medium justify-around '>
-				<div className=' p-5 z-50 md:w-auto w-full flex justify-between'>
+		<nav className='z-50  sticky top-0 bg-smooth-black 
+                        h-24 drop-shadow-2xl'>
+			<div className='flex   items-center font-medium justify-around '>
+				<div className=' p-5  md:w-auto w-full flex justify-between'>
 					<Link to='/'>
 						<img src={logo} alt='logo' className='md:cursor-pointer  h-10' />
 					</Link>
-					<div className='text-3xl md:hidden text-white  my__logo' onClick={() => setOpen(!open)}>
+					<div  className='text-3xl md:hidden text-white  my__logo' onClick={() => setOpen(!open)}>
 						<ion-icon name={`${open ? 'close' : 'menu'}`} />
 					</div>
 				</div>
 				<ul className='md:flex hidden text-white uppercase items-center gap-8 md:cursor-pointer'>
 					<div>
 						<div className=' py-5 px-3 inline-block'>
-							<SearchBar placeholder='Search for music or artist...' />
+							<SearchBar placeholder='Search only lowercase...' />
 						</div>
 					</div>
 				</ul>
