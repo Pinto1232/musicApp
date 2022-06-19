@@ -42,10 +42,7 @@ const SearchBar = ({ placeholder }) => {
 	//TODO: get title, tracklist, md5_image, tracklist (Album) (getArtistTopicData)
 	//TODO: Get  from contributors, role
 	//TODO: Get title from (getRadios)
-
-	/* console.log(getAllbumsData);  */
-
-	 console.log("Singer",getAllbumsData?.data.filter(title => title.title.toLowerCase().includes("h"))); 
+	 
 	return (
 		<div>
 			<div>
@@ -70,26 +67,32 @@ const SearchBar = ({ placeholder }) => {
 						<Table className={classes.table} aria-label='simple table'>
 							<TableHead>
 								<TableRow>
-									<TableCell>Album Cover</TableCell>
-									<TableCell>Title</TableCell>
-									<TableCell>Year  RELESE</TableCell>
+									<TableCell align="center">
+										Album Cover
+									</TableCell>
+									<TableCell align="center">
+										Title
+									</TableCell>
+									<TableCell align="center">
+										Year  RELESE
+									</TableCell>
 								</TableRow>
 							</TableHead>
 							<TableBody>
-								{getAllbumsData?.data.slice(0, 20).filter((albumTitle =>
+								{getAllbumsData?.data.slice(0, 18).filter((albumTitle =>
 									albumTitle.title.toUpperCase().includes(query.toUpperCase())
 								     )).map((albumTitle) =>
 	                                (
 								    <TableRow key={albumTitle.id}>
-									<TableCell component="th" scope="row">
+									<TableCell align="center" component="th" scope="row">
+											<img src={albumTitle.cover_small} alt="" />
+									</TableCell>
+									< TableCell align="center">
+											{albumTitle.title.substring(0,40)}
+									</TableCell>
+									<TableCell align="center">
 											{albumTitle.fans}
 									</TableCell>
-									< TableCell align="right">
-											{albumTitle.title.substring(0,10)}
-									</TableCell>
-									{/*<TableCell align="right">{row.fat}</TableCell>
-									<TableCell align="right">{row.carbs}</TableCell>
-									<TableCell align="right">{row.protein}</TableCell> */}
 									</TableRow>			
 							    ))}
 							</TableBody>
@@ -103,7 +106,4 @@ const SearchBar = ({ placeholder }) => {
 
 export default SearchBar;
 
-										/* 	{getRadios?.data.slice(0 , 6).filter((albumTitle => albumTitle.title.toUpperCase().includes(query.toUpperCase()))).map((albumTitle) => (
-								
-												
-										 ))} */
+										
