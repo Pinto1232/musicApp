@@ -28,8 +28,9 @@ const ArtistView = () => {
                             >
                             <div className=' basis-6/12  h-full px-10  m-10 '>
                                 <h1 className='prose text-lg
-                                    leading-loose md:text-6xl
-                                    text-blue uppercase
+                                    leading-loose md:text-7xl
+                                    text-white uppercase
+                                    bold
                                 '>
                                     {item.name} 
                                 </h1>
@@ -43,7 +44,7 @@ const ArtistView = () => {
                                     xs:text-center sm:text-center md:justify md:text-center
                                     capitalize rounded-sm p-6 py-5 md:text-start text-2xl'>
                                     {getTopArtistData?.data.slice(0, 1).map((itemDescription) => (
-                                        <span className="max-w-fit" key={itemDescription.duration}>
+                                        <span className="max-w-fit" key={itemDescription.id}>
                                             {itemDescription.title}
                                         </span>
                                     ))}

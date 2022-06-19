@@ -26,7 +26,9 @@ const DropDown = () => {
 					leave='transition ease-in duration-75'
 					leaveFrom='transform opacity-100 scale-100'
 					leaveTo='transform opacity-0 scale-95'>
-					<Menu.Items className='origin-top-right absolute bg-smooth-black  mt-3 w-64 h-auto  shadow-lg bg-border-smooth-black-100 ring-black ring-opacity-8 focus:outline-none'>
+					<Menu.Items className='origin-top-right absolute bg-smooth-black 
+					 mt-3 w-64 h-auto  shadow-lg bg-border-smooth-black-100 ring-black
+					  ring-opacity-8 focus:outline-none'>
 						<div className='py-1'>
 							<Menu.Item>
 								{({ active }) => (

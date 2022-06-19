@@ -10,107 +10,101 @@ const Footer = () => {
 	return (
 		<footer>
 			<Paper>
-        <Box className='bg-smooth-black 
-          text-white'>
-					<Container maxWidth='lg'>
-						<Grid container spacing={5}>
-                       <Grid className='justify-center'
-                                align="center" item xs={12} sm={4}>
-								<Box borderBottom={1}>Help</Box>
+				<Box
+					className='bg-smooth-black 
+                    text-white text-center'>
+					<Container
+						maxWidth='lg'>
+						<Grid  container spacing={5}>
+                       <Grid item xs={12} sm={4}>
+								<Box className="font-semibold 
+								  text-2xl" borderBottom={1}>INFORMATION</Box>
 								<Box>
-									<Link to='' color='inherit'>Contact</Link>
+									<Link to=''>ABOUT US</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>CUSTOMER SERVICE</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>ConPRIVACY POLICYact</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-							</Grid>
-
-							<Grid align='center'   item xs={12} sm={4}>
-								<Box borderBottom={1}>Account</Box>
-								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>MAP LOCATION</Link>
 								</Box>
 							</Grid>
 
-							<Grid align="center"   item xs={12} sm={4}>
-								<Box borderBottom={1}>Message</Box>
+							<Grid item xs={12} sm={4}>
+								<Box className="font-semibold 
+								  text-2xl" borderBottom={1}>WHY US?</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>FAQ</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>MEET THE TEAM</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>OUR BRANDS</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-							</Grid>
-
-							<Grid align="center"   item xs={12} sm={4}>
-								<Box borderBottom={1}>About Us</Box>
-								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-								<Box>
-									<Link to=''>Contact</Link>
-								</Box>
-								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>INTERESTING FACTS</Link>
 								</Box>
 							</Grid>
 
-							<Grid align="center"   item xs={12} sm={4}>
-								<Box borderBottom={1}>Faq</Box>
+							<Grid item xs={12} sm={4}>
+								<Box
+									className="font-semibold  text-2xl" 
+									>MY ACCOUNT</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>T's & C's</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>SIGN IN</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>VIEW CART</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>MY WISHLIST</Link>
 								</Box>
 							</Grid>
 
-							<Grid align="center"   item xs={12} sm={4}>
-								<Box borderBottom={1}>Show</Box>
+							<Grid   item xs={12} sm={4}>
+								<Box className="font-semibold  text-2xl"  borderBottom={1}>About Us</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>TRACK MY ORDER</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>HELP</Link>
+								</Box>
+								
+							</Grid>
+
+							<Grid  item xs={12} sm={4}>
+								<Box className="font-semibold  text-2xl"  borderBottom={1}>Faq</Box>
+				
+								<Box>
+									<Link to=''>Franchises</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>Login | Register</Link>
+								</Box>
+							</Grid>
+
+							<Grid  item xs={12} sm={4}>
+								<Box className="font-semibold  text-2xl"  borderBottom={1}>Show</Box>
+								<Box>
+									<Link to=''>ORDERS&SHIPPING</Link>
 								</Box>
 								<Box>
-									<Link to=''>Contact</Link>
+									<Link to=''>My Orders</Link>
 								</Box>
+								
 							</Grid>
 						</Grid>
+						<Box className="pb-10, pt-10 font-semibold
+								  text-2xl">
+						   Entertainement For LIfe
+						</Box>
 					</Container>
 				</Box>
 			</Paper>

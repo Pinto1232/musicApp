@@ -24,9 +24,9 @@ const HomeCard = () => {
           </div>
    
           <div>
-              <div className="container flex w-full mx-auto py-9 md:py-12 px-4 -mt-4 md:px-6">
+              <div className="container  flex w-full mx-auto py-9 md:py-12 px-4 -mt-4 md:px-6">
                   {isSuccess && (
-                      <div className="flex flex-col  md:flex-row md:min-h-full   gap-5 mx-auto ">
+                      <div className="flex flex-col shadow-2xl md:flex-row md:min-h-full   gap-5 mx-auto ">
                           {
                               dbt.data.slice(0, 6).map((items) => (
                                   <div key={items.id}>

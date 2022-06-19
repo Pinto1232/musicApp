@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './StyleSearch.css';
 import { FaSearch } from 'react-icons/fa';
 import DropDown from '../dropdown/DropDown';
-import { useGetAlbumsQuery, useGetRadioQuery, useGetRelatedQuery, useGetTopArtistQuery } from './../../services/AllApi';
-import { Link } from 'react-router-dom';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -12,14 +10,23 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from "@mui/material/Typography";
+import{
+		useGetAlbumsQuery,
+	    useGetRadioQuery,
+	    useGetRelatedQuery,
+		useGetTopArtistQuery
+} from './../../services/AllApi';
+
+
 
 const useStyles = makeStyles({
 	table: {
 		minWidth: 774,
-		
-
+		backgroundColor: '#ffffffd9'
 	},
 });
+
 
 
 
@@ -62,19 +69,27 @@ const SearchBar = ({ placeholder }) => {
 					style={query.length === 0 ? { display: 'none' } : { display: 'block' }}>
 					<TableContainer>
 						<Table className={classes.table} aria-label='simple table'>
-							<TableHead>
-								<TableRow>
-									<TableCell align="center">
-										Album Cover
+							<TableHead className="bg-smooth-black">
+								<TableRow style={{color: 'white'}}>
+									<TableCell align="center" className='text-white'>
+										<Typography color="common.white">
+												Album Cover
+										</Typography>
 									</TableCell>
 									<TableCell align="center">
-										Music Title
+										<Typography color="common.white">
+                                               Music Title
+										</Typography>
 									</TableCell>
 									<TableCell align="center">
-										Year  RELESE
+										<Typography color="common.white">
+                                            Year  RELESE
+										</Typography>
 									</TableCell>
 									<TableCell align="center">
-										Fans Number
+										<Typography color="common.white">
+                                           		Fans Number
+										</Typography>
 									</TableCell>
 								</TableRow>
 							</TableHead>
@@ -85,7 +100,7 @@ const SearchBar = ({ placeholder }) => {
 	                                (
 								    <TableRow key={albumTitle.id}>
 									<TableCell align="center" component="th" scope="row">
-											<img src={albumTitle.cover_small} alt="" />
+											<img className="rounded-full" src={albumTitle.cover_small} alt="" />
 									</TableCell>
 									< TableCell align="center">
 											{albumTitle.title.substring(0,40)}
