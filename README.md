@@ -1,6 +1,6 @@
 # musicApp
 # Pinto Manuel
-# React application consume an API from external source.
+# React application that consume an API from external source.
 
 
 # Instruction for running the App
