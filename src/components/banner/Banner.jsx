@@ -25,7 +25,7 @@ const Banner = () => {
                {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
                {isError && <h2 className='text-white text-center text-lg'>
                 Something went wrong, please try again later...</h2>}
-               <div className="container min-w-full bg-smooth-black mx-auto py-9 md:py-12 px-4 mb-8 -mt-4 md:px-6">
+               <div className="container -z-50 min-w-full bg-smooth-black mx-auto py-9 md:py-12 px-4 mb-8 -mt-4 md:px-6">
                   <div>
                       {dataRadio?.data.slice(0, 1).map((items) => (
                     <div key={items.id}>
@@ -38,7 +38,7 @@ const Banner = () => {
                                 <motion.h1
                                     animate={{ x: 20 }} 
                                     transition={{ ease: "easeOut", duration: 2 }}
-                                    className="text-3xl lg:text-4xl text-white mobile__helper 
+                                    className="text-3xl  lg:text-4xl text-white mobile__helper 
                                     font-semibold text-gray-800">Great Content</motion.h1>
                                           <motion.p
                                                animate={{ x: [0, 100, 0] }}
@@ -69,7 +69,7 @@ const Banner = () => {
                                           <motion.span
                                               animate={controls}
                                               className="text-white text-2xl mobile__helper">
-                                               <Video />
+                                              {/*  <Video /> */} {/* video component */}
                                           </motion.span>
                                    </div>
                                   <div className="md:w-4/12 lg:w-5/12 xl:w-4/12
@@ -84,7 +84,7 @@ const Banner = () => {
                                        <div className="text-base lg:text-xl text-white text-gray-800 underline">
                                         {
                                             dataTopArtist?.data.slice(0, 1).map((itemName) => (
-                                                <div className="mobile__helper" key={itemName.id}>
+                                                <div className="mobile__helper -z-50" key={itemName.id}>
                                                     Singer -   <span className="font-bold mobile__helper">{itemName.artist.name}</span>           
                                                 </div>
                                             ))

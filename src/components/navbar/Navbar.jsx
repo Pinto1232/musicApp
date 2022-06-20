@@ -8,10 +8,10 @@ const Navbar = () => {
 	const [ open, setOpen ] = useState(false);
 
 	return (
-		<nav className='z-50  sticky top-0 bg-smooth-black 
-                        h-24 drop-shadow-2xl'>
+		<nav className='sticky top-0 bg-smooth-black 
+                   z-50     h-24 drop-shadow-2xl'>
 			<div className='flex   items-center font-medium justify-around '>
-				<div className=' p-5  md:w-auto w-full flex justify-between'>
+				<div className=' p-5 z-50 md:w-auto w-full flex justify-between'>
 					<Link to='/'>
 						<img src={logo} alt='logo' className='md:cursor-pointer  h-10' />
 					</Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
 				<ul className='md:flex hidden text-white uppercase items-center gap-8 md:cursor-pointer'>
 					<div>
 						<div className=' py-5 px-3 inline-block'>
-							<SearchBar placeholder='Search only lowercase...' />
+							<SearchBar placeholder='Search...' />
 						</div>
 					</div>
 				</ul>
@@ -31,9 +31,8 @@ const Navbar = () => {
 				</div>
 
 				{/* Mobile navbar*/}
-				<div
-					className={`md:hidden bg-smooth-black text-white 
-               absolute w-full h-full bottom-0 py-24 pl-4 
+				<div className={`md:hidden bg-smooth-black text-white 
+               absolute w-full h-full bottom-0 py-24 pl-4
                 duration-500 easy-in ${open ? 'left-0' : 'left-[-100%]'}
               `}>
 					<div className='flex justify-center bg-smooth-black mr-4'>

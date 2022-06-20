@@ -3,7 +3,7 @@ import { IoOptionsOutline } from 'react-icons/io5';
 import { useGetAlbumsQuery } from '../../services/AllApi';
 
 const HomeCardDown = () => {
-	const { data: dbt, isSuccess, isLoading, isFetching, error } = useGetAlbumsQuery('');
+	const { data: dbt, isSuccess } = useGetAlbumsQuery('');
 
 	return (
 		<div>
@@ -16,7 +16,7 @@ const HomeCardDown = () => {
 									<div className='w-full shadow-md bg-white'>
 										<img
 											src={items.cover_medium}
-											className='scale-100 hover:scale-75  duration-300'
+											className='scale-100 hover:scale-75 -z-50  duration-300'
 											alt=''
 										/>
 										<div className='p-4 '>
