@@ -33,10 +33,13 @@ const AlbumCard = (props) => {
                                   />
 
                               ) : (
-                                  <Skeleton variant="rectangular" width={210} height={118} />    
+                                  <Skeleton
+                                      variant="rectangular"
+                                      width={210} height={118} />    
                               )}
                               
-                          <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                          <Box
+                              className="flex items-center justify-between leading-tight p-2 md:p-4">
                               {items ? (
                                   <Box sx={{pr: 2}}>
                                     <Typography gutterBottom variant="body2">
@@ -55,22 +58,15 @@ const AlbumCard = (props) => {
                               )} 
          
     
-                          </header>
-
-                          <article className="text-white ">
-                              <p className="flex items-center justify-between p-2 md:p-4">
-                                 
-                              </p>
-                          </article>
-
-                          <footer className="flex items-center justify-between bg-blue leading-none p-2 md:p-4">
+                          </Box>
+                          <Box className="flex items-center justify-between bg-blue leading-none p-2 md:p-4">
                               <a className="flex items-center no-underline hover:underline text-white" href="#">
                                   <span><FaThumbsUp></FaThumbsUp></span>
                               </a>
                               <a className="no-underline text-grey-darker hover:text-red-dark" href="#">
                                   <span><FaThumbsDown></FaThumbsDown></span>
                               </a>
-                          </footer>
+                          </Box>
                       </div>  
                   </Box>
               ))}
