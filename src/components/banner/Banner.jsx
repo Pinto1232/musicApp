@@ -25,7 +25,10 @@ const Banner = () => {
                {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
                {isError && <h2 className='text-white text-center text-lg'>
                 Something went wrong, please try again later...</h2>}
-               <div className="container -z-50 min-w-full bg-smooth-black mx-auto py-9 md:py-12 px-4 mb-8 -mt-4 md:px-6">
+              <div
+                  className="container -z-50 min-w-full 
+                  bg-smooth-black mx-auto py-9 md:py-12
+                   px-4 mb-8 -mt-4 md:px-6">
                   <div>
                       {dataRadio?.data.slice(0, 1).map((items) => (
                     <div key={items.id}>
