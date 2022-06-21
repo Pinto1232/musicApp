@@ -1,17 +1,18 @@
-import React, {  } from 'react'
+import React from 'react'
 import { motion,useAnimation } from "framer-motion"
 import{
     useGetRadioQuery,
     useGetTopArtistQuery
 } from '../../services/AllApi'
 import './Banner.css'
-import Video from '../__video/Video'
+
 
 
 const Banner = () => {
     const { data: dataTopArtist, isLoading, isSuccess, isError } = useGetTopArtistQuery("")
     const { data: dataRadio } = useGetRadioQuery("")
     const controls = useAnimation()
+    
     
     controls.start({
         x: "20%",
