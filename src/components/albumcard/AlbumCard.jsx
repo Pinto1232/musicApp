@@ -19,7 +19,7 @@ const AlbumCard = (props) => {
           <div className="grid grid-cols-1 xs:grid-cols-2   sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-7 mx-auto mt-10  p-4 gap-8">
               {error && <p className='text-white text-center text-lg'>Something went wrong, please try again later...</p>}
              
-              {relatedData?.data.slice(0, 7).map((items) => (
+              {relatedData?.data.slice(0, 14).map((items) => (
                   <Box key={items.id}  sx={{ width: 210, marginRight: 0.5, my: 5 }}>
                       <div className=" Card  text-white bg-smooth-black w-full">
                
@@ -37,12 +37,24 @@ const AlbumCard = (props) => {
                               )}
                               
                           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                      <Typography gutterBottom variant="body2">
-                                                {items.name}
+                              {items ? (
+                                  <Box sx={{pr: 2}}>
+                                    <Typography gutterBottom variant="body2">
+                                        {items.name}
                                       </Typography>
-                              <p className="text-white text-sm">
-                                  {`№ Fans ${items.nb_fan}`}
-                              </p>
+                                      
+                                      <Typography gutterBottom variant="body2">
+                                        {`№ Fans ${items.nb_fan}`}
+                                      </Typography>
+                                  </Box>
+                                 ):(
+                                    <Box sx={{ pt: 0.5 }}>
+                                    <Skeleton />
+                                    <Skeleton width="60%" />
+                                    </Box>    
+                              )} 
+         
+    
                           </header>
 
                           <article className="text-white ">
