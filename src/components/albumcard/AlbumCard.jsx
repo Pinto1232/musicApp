@@ -2,34 +2,44 @@ import React from 'react';
 import { useGetRelatedQuery } from './../../services/AllApi'
 import { FaThumbsUp,FaThumbsDown } from "react-icons/fa";
 import CardFixed from '../Card/CardFixed';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
 
-const AlbumCard = () => {
-    const { data: relatedData, isLoading, error, isSuccess } = useGetRelatedQuery("")
-    
+const AlbumCard = (props) => {
+    const { data: relatedData, error, isLoading } = useGetRelatedQuery("")
+     const { loading = false } = props;
+
 
 
   return (
       <div>
-          <div className="grid grid-cols-1 xs:grid-cols-2 shadow-2xl  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-7 mx-auto mt-10  p-4 gap-8">
-             
-              {isLoading && <p className="text-white text-center text-lg">Loading data...</p>}
+          <Grid container>
+          <div className="grid grid-cols-1 xs:grid-cols-2   sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-7 mx-auto mt-10  p-4 gap-8">
               {error && <p className='text-white text-center text-lg'>Something went wrong, please try again later...</p>}
-              {relatedData?.data.slice(0, 14).map((items) => (
-                  <div key={items.id}>
-                      <div className=" Card shadow-2xl text-white bg-smooth-black w-full">
-                          <div className="overflow-hidden  shadow-lg ">
-                              <a href="#">
-                                  <img src={items.picture_medium} className="block h-auto w-full 
-                                  transform transition duration-500 hover:scale-110
-                                  " alt="img" />
-                              </a>
-                          </div>
+             
+              {relatedData?.data.slice(0, 7).map((items) => (
+                  <Box key={items.id}  sx={{ width: 210, marginRight: 0.5, my: 5 }}>
+                      <div className=" Card  text-white bg-smooth-black w-full">
+               
+                              {items ? (
+                              <img
+                                      src={items.picture_medium}
+                                       className="block h-auto w-full 
+                                         transform transition duration-500
+                                         hover:scale-110 cursor-pointer
+                                       "alt="img"
+                                  />
+
+                              ) : (
+                                  <Skeleton variant="rectangular" width={210} height={118} />    
+                              )}
+                              
                           <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                              <h1 className="text-lg">
-                                  <a className="no-underline hover:underline text-white " href="#">
-                                      {items.name}
-                                  </a>
-                              </h1>
+                                      <Typography gutterBottom variant="body2">
+                                                {items.name}
+                                      </Typography>
                               <p className="text-white text-sm">
                                   {`№ Fans ${items.nb_fan}`}
                               </p>
@@ -50,9 +60,10 @@ const AlbumCard = () => {
                               </a>
                           </footer>
                       </div>  
-                  </div>
+                  </Box>
               ))}
           </div>
+          </Grid>
           <CardFixed />
       </div>
   )

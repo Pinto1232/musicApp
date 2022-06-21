@@ -1,17 +1,37 @@
 import React from 'react'
 import TopTrackCard from '../toptracks/TopTrackCard'
-import { useGetTopArtistQuery, useGetRadioQuery, useGetRelatedQuery } from '../../services/AllApi'
+import { useGetRadioQuery, useGetRelatedQuery } from '../../services/AllApi'
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 
 const ArtistView = () => {
     const { data: getTopArtistData, isSuccess: successed, isLoading: loading, error: messageError } = useGetRadioQuery("")
     const { data: getRelatedData } = useGetRelatedQuery("")
+    const [open, setOpen] = React.useState(false);
+
+    const handleClose = () =>{
+        setOpen(false);
+    };
+
+    const handleToggle = () =>{
+        setOpen(!open);
+    };
+
+
 
     return (
             <div>
             <div>
-            {loading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
+                {loading && <h2 className="text-white text-center text-lg">
+                   <Backdrop
+                        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                        open>
+                        <CircularProgress color="inherit" />
+                   </Backdrop>
+                </h2>}
               {messageError && <h2 className='text-white text-center text-lg'>Something went wrong, please try again later...</h2>}
                  <div className="bg-transparent p-0 text-black-color grid lg:grid-cols-2x ">
                 <div className='flex flex-col md:flex-row '>

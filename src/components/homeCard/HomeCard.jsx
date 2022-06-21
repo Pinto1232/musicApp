@@ -5,30 +5,18 @@ import Banner from '../banner/Banner';
 import TopBar from '../__barHome/TopBar';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-import Button from '@mui/material/Button';
 import './homeCard.css'
-/* import { makeStyles } from '@material-ui/core';
 
 
-const useStyles = makeStyles((theme) => ({
-    backdrop: {
-        zIndex: theme.zIndex.drawer + 1,
-        color: "#fff",
-    }
-})) */
-
-const HomeCard = () =>
-{
+const HomeCard = () =>{
     const { data: dbt, isSuccess, isLoading, isFetching, error } = useGetAlbumsQuery("")
     const [open, setOpen] = React.useState(false);
 
-    const handleClose = () =>
-    {
+    const handleClose = () =>{
         setOpen(false);
     };
 
-    const handleToggle = () =>
-    {
+    const handleToggle = () =>{
         setOpen(!open);
     };
 
