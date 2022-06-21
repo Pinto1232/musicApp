@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion,useAnimation } from "framer-motion"
 import{
     useGetRadioQuery,
@@ -12,20 +12,30 @@ const Banner = () => {
     const { data: dataTopArtist, isLoading, isSuccess, isError } = useGetTopArtistQuery("")
     const { data: dataRadio } = useGetRadioQuery("")
     const controls = useAnimation()
+   
     
+ 
+
     
     controls.start({
         x: "20%",
         transition: { duration: 3 },
     })
 
-
+/* 
+    let clientID = "a5665f4654279eda6c91e746db691675";
+    let endpoint = `artist/?client_id=${clientID}`;
+    
+    fetch(endpoint).then(function (response){
+        console.log(response.json());
+    })
+ */
   return (
       <div>
           <div>
                {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
                {isError && <h2 className='text-white text-center text-lg'>
-                Something went wrong, please try again later...</h2>}
+                  Something went wrong, please try again later...</h2>}
               <div
                   className="container -z-50 min-w-full 
                   bg-smooth-black mx-auto py-9 md:py-12
@@ -43,7 +53,7 @@ const Banner = () => {
                                     animate={{ x: 20 }} 
                                     transition={{ ease: "easeOut", duration: 2 }}
                                     className="text-3xl  lg:text-4xl text-white mobile__helper 
-                                    font-semibold text-gray-800">Great Content</motion.h1>
+                                     text-gray-800">Great Content</motion.h1>
                                           <motion.p
                                                animate={{ x: [0, 100, 0] }}
                                               className="text-base lg:text-xl 
@@ -82,7 +92,7 @@ const Banner = () => {
                                       <div className="flex flex-col justify-center">
                                           {dataTopArtist?.data.slice(0, 1).map((shortTitle) => (
                                               <h1 key={shortTitle.id} className="text-3xl lg:text-4xl
-                                                font-semibold mobile__helper
+                                                 mobile__helper
                                                 text-white text-gray-800">{shortTitle.album.title}</h1>
                                           ))}
                                        <div className="text-base lg:text-xl text-white text-gray-800 underline">

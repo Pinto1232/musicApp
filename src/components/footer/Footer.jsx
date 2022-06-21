@@ -39,7 +39,7 @@ const Footer = () => {
 							<Grid item xs={12} sm={4}>
 								<Box
 									className="font-semibold 
-								     text-1xl" font-semibold
+								     text-1xl" 
 									borderBottom={1}>
 									WHY US?
 								</Box>
@@ -80,7 +80,7 @@ const Footer = () => {
 							<Grid   item xs={12} sm={4}>
 								<Box
 									className="font-semibold 
-									 text-1xl"font-semibold
+									 text-1xl"
 									 borderBottom={1}>
 									About Us
 								</Box>
@@ -112,7 +112,7 @@ const Footer = () => {
 							<Grid  item xs={12} sm={4}>
 								<Box
 									className="font-semibold 
-									text-1xl" font-semibold
+									text-1xl" 
 									borderBottom={1}>Show</Box>
 								<Box>
 									<Link to=''>ORDERS&SHIPPING</Link>
