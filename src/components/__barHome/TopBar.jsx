@@ -1,24 +1,24 @@
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import React from 'react'
-import{
-    FaFolderOpen,
-    FaDiceOne,
-    FaGlobeAfrica,
-    FaCalendarAlt,
-    FaBriefcase,
-    FaSort,
-    FaFilter
-} from "react-icons/fa";
+import
+    {
+        FaFolderOpen,
+        FaDiceOne,
+        FaGlobeAfrica,
+        FaCalendarAlt,
+        FaBriefcase,
+        FaSort,
+        FaFilter
+    } from "react-icons/fa";
 import './TopBar.css'
 
 const valData = [
     {
         id: 0, title: "Genre All", icon:
             <FaFolderOpen
-            className="hover:text-smooth-black 
-             cursor-pointer text-xm mx-2 mt-1"
-        />
+                className="hover:text-smooth-black 
+             cursor-pointer text-xm mx-2 mt-1"/>
     },
     {
         id: 1, title: "Type All",
@@ -66,28 +66,29 @@ const valData = [
 ];
 
 
-const TopBar = () => {
-  return (
-      <div>
-          <Box>
-              <Grid container>
-                  <Box>
-                  <span className="flex mb-6 -mt-9  mx-1 border-w-b-xs border-b-2 ">
-                        Result for:<p className="mx-2"> All </p> </span>
-                <Grid className="GridContainer tex-white text-sm md:px-0 ">
-                  {valData.map((item) => (
-                      <Grid className="bg-smooth-black
-                       px-20 py-2 px-3 cursor-pointer 
+const TopBar = () =>
+{
+    return (
+        <div>
+            <Box>
+                <Grid container>
+                    <Box>
+                        <span className="flex mb-6 -mt-9  mx-1 border-w-b-xs border-b-2 ">
+                            Result for:<p className="mx-2"> All </p> </span>
+                        <Grid className="GridContainer tex-white text-sm md:px-0 ">
+                            {valData.map((item) => (
+                                <Grid className="bg-smooth-black
+                       px-2 py-2 cursor-pointer 
                        rounded hover:bg-blue" key={item.id}>
-                           {item.icon}  {item.title} 
-                    </Grid>
-                  ))}
+                                    {item.icon}  {item.title}
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Box>
                 </Grid>
-              </Box>
-             </Grid>
-          </Box>
-    </div>
-   )
+            </Box>
+        </div>
+    )
 }
 
 export default TopBar

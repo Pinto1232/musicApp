@@ -11,6 +11,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from "@mui/material/Typography";
+import { FaChartLine } from "react-icons/fa";
+
 import{
 		useGetAlbumsQuery,
 	    useGetRadioQuery,
@@ -88,7 +90,8 @@ const SearchBar = ({ placeholder }) => {
 										</Typography>
 									</TableCell>
 									<TableCell align="center">
-										<Typography color="common.white">
+										<Typography
+											color="common.white">
                                            		Fans Number
 										</Typography>
 									</TableCell>
@@ -109,8 +112,19 @@ const SearchBar = ({ placeholder }) => {
 									<TableCell align="center">
 											{albumTitle.release_date}
 									</TableCell>
-									<TableCell align="center">
-											{albumTitle.fans}
+											 <TableCell align="center"
+												 style={{ border: '1px solid #000', color: 'white' }}
+												 className=" bg-smooth-black">
+												 <FaChartLine
+													 className='absolute'
+													 style={{
+														 border: '1px solid #fff',
+														 borderRadius: '50%',
+														 padding: '5px',
+														 fontSize: '20px'
+													 }}
+												 />
+												 {albumTitle.fans}
 									</TableCell>
 									</TableRow>			
 							    ))}

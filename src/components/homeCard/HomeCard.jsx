@@ -57,14 +57,25 @@ const HomeCard = () =>{
                                     <div key={items.id}>
                                         <div className="w-full shadow-md bg-white">
                                             
-                                            <img src={items.cover_medium} className="scale-100 hover:scale-75 duration-30 -z-50" alt="" />
+                                            <img src={items.cover_medium}
+                                                className="transform transition duration-500 hover:scale-110 -z-50"
+                                                alt={items.name} />
 
                                             <div className="p-4 ">
                                                 <div>
-                                                    <h5 className="mb-2   text-start text-smooth-black tracking-tight ">{`${items.title.substring(0, 23)}......`}</h5>
-                                                    <h5 className="mb-2 text-sm font-bold text-smooth-black  text-start ">{`Fans - ${items.fans}`}</h5>
+                                                    <h5
+                                                        className="mb-2   text-start text-smooth-black tracking-tight ">
+                                                        {`${items.title.substring(0, 23)}......`}
+                                                    </h5>
+                                                    <h5
+                                                        className="mb-2 text-sm font-bold text-smooth-black  text-start ">
+                                                        {`Fans - ${items.fans}`}
+                                                    </h5>
                                                 </div>
-                                                <p className="mb-3 font-normal  text-gray-700 dark:text-gray-400 text-smooth-black text-start">{`Release - ${items.release_date}`}</p>
+                                                <p
+                                                    className="mb-3 font-normal  text-gray-700 dark:text-gray-400 text-smooth-black text-start">
+                                                    {`Release - ${items.release_date}`}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
