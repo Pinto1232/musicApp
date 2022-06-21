@@ -22,14 +22,15 @@ const Banner = () => {
         transition: { duration: 3 },
     })
 
-/* 
+
     let clientID = "a5665f4654279eda6c91e746db691675";
-    let endpoint = `artist/?client_id=${clientID}`;
+    let endpoint = `https://api.deezer.com/artist/?client_id=${clientID}`;
+    
     
     fetch(endpoint).then(function (response){
-        console.log(response.json());
+        console.log(response);
     })
- */
+ 
   return (
       <div>
           <div>
