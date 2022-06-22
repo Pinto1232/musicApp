@@ -23,13 +23,19 @@ const Banner = () => {
     })
 
 
-    let clientID = "a5665f4654279eda6c91e746db691675";
-    let endpoint = `https://api.deezer.com/artist/?client_id=${clientID}`;
+   /*  */
+ 
+   /*  let clientID = "a5665f4654279eda6c91e746db691675"; */
+    let endpoint = `/api/artist/27/top/`;
     
     
-    fetch(endpoint).then(function (response){
-        console.log(response);
+    fetch(endpoint).then(function (response) {
+        return response.json()
+    }) 
+    .then(function (jsonData){
+        console.log('Banner log', jsonData);
     })
+   
  
   return (
       <div>

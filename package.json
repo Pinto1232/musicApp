@@ -2,7 +2,7 @@
   "name": "music-app",
   "private": true,
   "version": "0.0.0",
-  "proxy": "https://api.deezer.com/",
+  "proxy": "http://api.deezer.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -23,6 +23,7 @@
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^16.0.0",
+    "cors": "^2.8.5",
     "create": "^0.0.2",
     "framer-motion": "^6.3.11",
     "heroku": "^7.33.3",
