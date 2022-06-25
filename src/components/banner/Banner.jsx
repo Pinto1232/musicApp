@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { motion,useAnimation } from "framer-motion"
 import{
     useGetRadioQuery,
@@ -12,40 +12,47 @@ const Banner = () => {
     const { data: dataTopArtist, isLoading, isSuccess, isError } = useGetTopArtistQuery("")
     const { data: dataRadio } = useGetRadioQuery("")
     const controls = useAnimation()
-   
+
+    console.log(dataTopArtist);
     
+
+  
+    let endpoint = `/api/artist/27/top/`;
+    fetch(endpoint).then(function (response) {
+        return response.json()
+       }) 
+        .then(function (jsonData){
+          /*  console.log('Banner log', jsonData);  */
+    }) 
  
 
-    
+
     controls.start({
         x: "20%",
         transition: { duration: 3 },
     })
 
 
-   /*  */
- 
-   /*  let clientID = "a5665f4654279eda6c91e746db691675"; */
-    let endpoint = `/api/artist/27/top/`;
-    
-    
-    fetch(endpoint).then(function (response) {
-        return response.json()
-    }) 
-    .then(function (jsonData){
-        console.log('Banner log', jsonData);
-    })
-   
  
   return (
       <div>
-          <div>
+          {dataTopArtist?.data.slice(0, 1).map((artistItem) => (
+              <div key={artistItem.id}>
+                     <div>
                {isLoading && <h2 className="text-white text-center text-lg">Loading data...</h2>}
                {isError && <h2 className='text-white text-center text-lg'>
                   Something went wrong, please try again later...</h2>}
-              <div
+                <div
+                  style={{
+                                backgroundColor: 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
+                                backgroundImage: `url(${(artistItem.album.cover_big  )})`,  
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'center',
+                            }}
+                   
                   className="container -z-50 min-w-full 
-                  bg-smooth-black mx-auto py-9 md:py-12
+                  bg-white mx-auto py-9 md:py-12
                    px-4 mb-8 -mt-4 md:px-6">
                   <div>
                       {dataRadio?.data.slice(0, 1).map((items) => (
@@ -126,6 +133,8 @@ const Banner = () => {
                 </div>
             </div>
           </div>
+              </div>
+          ))}
       </div>
      )
 }
