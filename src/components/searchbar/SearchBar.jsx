@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa';
 import DropDown from '../dropdown/DropDown';
 import Typography from "@mui/material/Typography";
 import { FaChartLine } from "react-icons/fa";
-import { makeStyles } from '@mui/styles';
+
 
 import{
 		useGetAlbumsQuery,
@@ -12,24 +12,16 @@ import{
 	    useGetRelatedQuery,
 		useGetTopArtistQuery
 } from './../../services/AllApi';
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 
 
-const useStyles = makeStyles({
-	table: {
-		minWidth: 774,
-		backgroundColor: '#ffffffd9',
-	},
-
-});
 
 
 
 
 const SearchBar = ({ placeholder }) => {
 	const [ query, setQuery ] = useState('');
-	const classes = useStyles();
 
 	/* Custom hooks */
 	const { data: getRadios, isLoading, isSuccess, isError } = useGetRadioQuery('');
@@ -65,7 +57,14 @@ const SearchBar = ({ placeholder }) => {
 					className='list absolute tb__helper '
 					style={query.length === 0 ? { display: 'none' } : { display: 'block' }}>
 					<TableContainer>
-						<Table className={classes.table} aria-label='simple table'>
+						<Table
+							
+							style={{
+								minWidth: 774,
+								backgroundColor: '#ffffffd9',
+							}}
+						
+							 aria-label='simple table'>
 							<TableHead className="bg-smooth-black">
 								<TableRow style={{color: 'white'}} className="z-50">
 									<TableCell align="center" className='text-white'>
