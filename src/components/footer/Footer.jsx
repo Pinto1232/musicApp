@@ -15,7 +15,7 @@ const Footer = () => {
 						<Grid  container spacing={5}>
                        <Grid item xs={12} sm={4}>
 								<Box
-									className="font-semibold 
+									className="font-extrabold 
 								     text-1xl" borderBottom={1}>
 									INFORMATION
 								</Box>
@@ -35,7 +35,7 @@ const Footer = () => {
 
 							<Grid item xs={12} sm={4}>
 								<Box
-									className="font-semibold 
+									className="font-extrabold 
 								     text-1xl" 
 									borderBottom={1}>
 									WHY US?
@@ -56,8 +56,8 @@ const Footer = () => {
 
 							<Grid item xs={12} sm={4}>
 								<Box
-									className="font-semibold 
-									 text-1xl" >
+									className="font-extrabold  
+									 text-1xl" borderBottom={1}>
 									MY ACCOUNT
 								</Box>
 								<Box>
@@ -76,7 +76,7 @@ const Footer = () => {
 
 							<Grid   item xs={12} sm={4}>
 								<Box
-									className="font-semibold 
+									className="font-extrabold  
 									 text-1xl"
 									 borderBottom={1}>
 									About Us
@@ -94,7 +94,7 @@ const Footer = () => {
 
 							<Grid  item xs={12} sm={4}>
 								<Box
-									className="font-semibold   
+									className="font-extrabold    
 								    text-1xl" borderBottom={1}>
 									Faq
 								</Box>
@@ -108,7 +108,7 @@ const Footer = () => {
 
 							<Grid  item xs={12} sm={4}>
 								<Box
-									className="font-semibold 
+									className="font-extrabold  
 									text-1xl" 
 									borderBottom={1}>Show</Box>
 								<Box>
@@ -121,7 +121,7 @@ const Footer = () => {
 							</Grid>
 						</Grid>
 						<Box className="pb-10, pt-10
-						font-semibold text-1xl uppercase cursor-pointer">
+						font-extrabold  text-1xl uppercase cursor-pointer">
 						   2022 Copyright &copy; <a href="http://pintotnet@gmail.com">Pinto All right reserved</a>
 						</Box>
 					</Container>
