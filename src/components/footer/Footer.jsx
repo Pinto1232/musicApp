@@ -1,9 +1,6 @@
-import React from 'react';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import { Link } from 'react-router-dom/';
 import Paper from '@mui/material/Paper';
+import { Box, Container, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
